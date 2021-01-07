@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+  <script src="index.js"></script>
+
+</head>
+
+<body>
+
+  <div id="game" class="container-fluid">
+
+    <div class="row rank">
+      <div class="col-sm">
+        <h2><span id="span_player_one"></span> <span id="span_player_one_score" class="badge badge-secondary">0</span>
+        </h2>
+      </div>
+      <div class="col-sm text-center">
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#resultGame">
+          Informar Vencedor!
+        </button>
+      </div>
+      <div class="col-sm text-right">
+        <h2><span id="span_player_two"></span> <span id="span_player_two_score" class="badge badge-secondary">0</span>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <table class="center display-3">
+        <tr>
+          <td></td>
+          <td class="border-left-border-right"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="border-top-border-bottom"></td>
+          <td class="border-top-border-bottom border-left-border-right"></td>
+          <td class="border-top-border-bottom"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="border-left-border-right"></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Modal Nomes dos Jogadores -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Jogo da Velha</h5>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label>Jodador 1</label>
+              <input type="text" class="form-control" placeholder="Digite o nome do Jogador." name="input_player_one">
+            </div>
+            <div class="form-group">
+              <label>Jodador 2</label>
+              <input type="text" class="form-control" placeholder="Digite o nome do Jogador." name="input_player_two">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="button_start_game" type="button" class="btn btn-danger">Começar o Jogo!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Resultado Final -->
+  <div class="modal fade" id="resultGame" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="resultGameLabel">Vencedor do Combate?</h5>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <div class="col-sm">
+            <button id="button_player_one_win" type="button" class="btn btn-danger btn-lg btn-block">Jogador 1</button>
+          </div>
+          <div class="col-sm">
+            <button id="button_player_nobody_win" type="button" class="btn btn-danger btn-lg btn-block">Nenhum</button>
+          </div>
+          <div class="col-sm">
+            <button id="button_player_two_win" type="button" class="btn btn-danger btn-lg btn-block">Jogador 2</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

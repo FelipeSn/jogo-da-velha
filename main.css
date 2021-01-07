@@ -1,0 +1,43 @@
+body{
+  background: black
+}
+table {
+  width: 500px;
+  height: 500px;
+  background: black;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table td {
+  width: 33.33%;
+  height: 150px !important;
+  text-align: center;
+}
+
+.border-top-border-bottom {
+  border-top: 4px solid rgb(243, 243, 243);
+  border-bottom: 4px solid rgb(243, 243, 243);
+}
+
+.border-left-border-right {
+  border-left: 4px solid rgb(243, 243, 243);
+  border-right: 4px solid rgb(243, 243, 243);
+}
+
+#game {
+  display: none;
+}
+
+.rank{
+  margin: 36px;
+  color: white;
+}
+
+.display-3{
+  color: chartreuse;
+  font-weight: bold;
+}
